@@ -26,8 +26,8 @@ require_once 'header.php';
 				<tbody>
 				<?php for ($i = 0, $iMax = count($resultats); $i < $iMax; $i++) : ?>
 					<tr>
-						<td><?=$resultats[$i]->titre?></td>
-						<td><?=$resultats[$i]->adresse?></td>
+						<td><?=$resultats[$i]->sitename?></td>
+						<td><?=$resultats[$i]->password?></td>
 						<td><button class="btn-primary">Copier le mot de passe</button></td>
 					</tr>
 				<?php endfor; ?>
