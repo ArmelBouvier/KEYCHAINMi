@@ -42,13 +42,11 @@ if ( isset( $_POST ) && ! empty( $_POST ) ) {
 					} else {
 
 						$_SESSION['errors']  = 'erreur lors de l\'ajout de l\'utilisateur';
-						header( 'Location: inscription.php' );
+						header( 'Location: ../inscription.php' );
 					}
-
 				} else {
-
 					$_SESSION['errors'] = 'erreur';
-					header( 'Location: /loi-des-series/' );
+					header( 'Location:' . $_SERVER['HTTP_REFERER'] );
 				}
 			} else {
 				$_SESSION['errors'] = 'Veuillez entrer un mot de passe';
