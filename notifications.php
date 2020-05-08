@@ -4,7 +4,6 @@
     <?php if($k === 'success' || $k === 'errors') :?>
     <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="2000">
         <div class="toast-header">
-            <img src="images/dices30px.png" alt="">
             <strong class="mr-auto"><?= $k; ?></strong>
             <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
                 <span aria-hidden="true">&times;</span>

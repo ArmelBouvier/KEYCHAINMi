@@ -1,17 +1,14 @@
 <!--mdp admin : tititatatutu-->
 
-<?php require_once 'bdd.php';
-//password_hash($mdp,PASSWORD_BCRYPT);
-//echo password_hash('000000', PASSWORD_BCRYPT);
-
-
+<?php
+session_start();
+require_once 'bdd.php';
 $req = $connexion->prepare( 'SELECT * FROM user WHERE email = :email' );
 $req->bindValue( ':email', $_POST['email'], PDO::PARAM_STR );
 $req->execute();
 $user = $req->fetch( PDO::FETCH_OBJ );
 if ( $user ) {
 	if ( password_verify( $_POST['password'], $user->password ) ) {
-//		print_r($user->pseudo);
 		$_SESSION['access']  = true;
 		$_SESSION['success'] = 'Vous êtes connecté ' . $user->pseudo . ' !';
 		header( 'Location: ../dashboard.php' );

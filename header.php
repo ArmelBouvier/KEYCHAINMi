@@ -27,7 +27,7 @@ if (!isset($_SESSION)) {
 
 <body>
 <header>
-    <?php require_once 'notifications.php'; ?>
+    <?php require_once 'notifications.php'; var_dump($_SESSION);?>
     <?php if (isset($_SESSION['access']) && $_SESSION['access'] === true) : ?>
         <a href="app/disconnect.php" class="btn btn-danger">Déconnexion</a>
     <?php endif; ?>
