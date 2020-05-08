@@ -3,7 +3,7 @@
 	<section class="container">
 		<h1 class="py-5">Bienvenue sur KEYCHAINMi, le gestionnaire de mot de passe !</h1>
 
-		<form action="app/add_user.php" method="POST">
+		<form action="app/addUser.php" method="POST">
 			<div class="row">
 				<div class="col-md-12 d-flex justify-content-center">
 					<button type="submit" class="btn btn-dark">Envoyer</button>
@@ -27,7 +27,7 @@
 				<div class="col-md-6">
 					<div class="form-group my-5">
 						<label for="exampleInputPassword1">Mot de passe</label>
-						<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enrtez votre mot de passe" name="password" required>
+						<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Entrez votre mot de passe" name="password" required>
 					</div>
 				</div>
 			</div>
