@@ -9,6 +9,7 @@ $req->execute();
 $user = $req->fetch( PDO::FETCH_OBJ );
 if ( $user ) {
 	if ( password_verify( $_POST['password'], $user->password ) ) {
+		$_SESSION['id']  = $user->id;
 		$_SESSION['access']  = true;
 		$_SESSION['success'] = 'Vous êtes connecté ' . $user->pseudo . ' !';
 		header( 'Location: ../dashboard.php' );
