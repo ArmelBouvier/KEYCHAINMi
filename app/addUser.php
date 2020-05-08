@@ -16,13 +16,13 @@ if ( isset( $_POST ) && ! empty( $_POST ) ) {
 
 				$checknpseudo = "SELECT * FROM user WHERE pseudo = :pseudo";
 				$req       = $connexion->prepare( $checknpseudo );
-				$req->bindValue( ':pseudo', $_POST['pseudo'], PDO::PARAM_STR );
+				$req->bindValue( ':pseudo', htmlentities($_POST['pseudo']), PDO::PARAM_STR );
 				$req->execute();
 				$resultpseudo = $req->fetch( PDO::FETCH_OBJ );
 
 				$query = "SELECT * FROM user WHERE email = :email";
 				$req   = $connexion->prepare( $query );
-				$req->bindValue( ':email', $_POST['email'], PDO::PARAM_STR );
+				$req->bindValue( ':email', htmlentities($_POST['email']), PDO::PARAM_STR );
 				$req->execute();
 				$resultemail = $req->fetch( PDO::FETCH_OBJ );
 

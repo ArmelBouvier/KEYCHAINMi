@@ -12,7 +12,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="form-group my-5">
-						<label for="lastname">Pseudo</label>
+						<label for="pseudo">Pseudo</label>
 						<input type="text" class="form-control" id="pseudo"  placeholder="Entrez votre pseudo" name="pseudo" required>
 					</div>
 				</div>

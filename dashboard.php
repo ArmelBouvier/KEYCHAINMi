@@ -18,15 +18,9 @@ require_once 'header.php';
 			<table class="table">
 				<thead class="thead-dark">
 				<tr>
-					<th scope="col" id="titre">Titre</th>
-					<th scope="col" id="adresse">Adresse</th>
-					<th scope="col" id="cp">Code postal</th>
-					<th scope="col" id="ville">Ville</th>
-					<th scope="col" id="surface">Surface</th>
-					<th scope="col" id="prix">Prix</th>
-					<th scope="col" id="description">Description</th>
-					<th scope="col" id="photo">Photo</th>
-					<th scope="col" id="vue"></th>
+					<th scope="col" id="url">Site</th>
+					<th scope="col" id="password">Mot de passe</th>
+					<th scope="col" id="cp"></th>
 				</tr>
 				</thead>
 				<tbody>
@@ -34,13 +28,7 @@ require_once 'header.php';
 					<tr>
 						<td><?=$resultats[$i]->titre?></td>
 						<td><?=$resultats[$i]->adresse?></td>
-						<td><?=$resultats[$i]->cp?></td>
-						<td><?=$resultats[$i]->ville?></td>
-						<td><?=$resultats[$i]->surface?>m²</td>
-						<td><?=$resultats[$i]->prix?>€</td>
-						<td><?=$resultats[$i]->description?></td>
-						<td><img src="images/miniatures/<?=$resultats[$i]->photo?>" alt="pas de photo"></td>
-						<td><a href="bien.php?id=<?=$resultats[$i]->id_logement?>" class="btn btn-sm btn-outline-primary"> Voir</a></td>
+						<td><button class="btn-primary">Copier le mot de passe</button></td>
 					</tr>
 				<?php endfor; ?>
 				</tbody>

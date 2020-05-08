@@ -24,5 +24,5 @@ function passwordGenerator(
 	return $str;
 }
 
-$mdp = passwordGenerator();
-var_dump($mdp);
+//$mdp = passwordGenerator();
+//var_dump($mdp);
