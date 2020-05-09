@@ -9,12 +9,13 @@ if (!isset($_SESSION)) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="textual rpg maker">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="HTML5 website template">
+    <meta name="keywords" content="global, template, html, sass, jquery">
     <meta name="generator" content="Jekyll v3.8.5">
     <title>KEYCHAINMi</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -22,39 +23,49 @@ if (!isset($_SESSION)) {
 
 
     <!-- Custom style-->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 </head>
 
 <body>
+<?php require_once 'notifications.php';?>
 <header>
-    <?php require_once 'notifications.php';?>
-    <?php if (isset($_SESSION['access']) && $_SESSION['access'] === true) : ?>
-        <a href="app/disconnect.php" class="btn btn-danger">Déconnexion</a>
-    <?php endif; ?>
+
+
     <!--MENU-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-            KEYCHAINMi
+<div class="container-fluid">
+	<?php if (isset($_SESSION['access']) && $_SESSION['access'] === true) : ?>
+        <div class="row">
+            <div class="col-12 d-flex justify-content-end"><a href="app/disconnect.php" class="btn btn-outline-warning">Déconnexion</a></div>
+        </div>
+	<?php endif; ?>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand text-white" href="#">
+            <img src="img/logo2.png" alt="KEYCHAINMi">
+            <span class="KEYCHAINMi">KEYCHAINMI</span>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        <button class="navbar-toggler btn-primary" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon bg-primary"></span>
         </button>
 
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
-            <ul class="navbar-nav d-flex justify-content-around w-100">
+            <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php">Accueil <span class="sr-only">(current)</span></a>
+                    <a class="nav-link text-white" href="index.php">Accueil <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="dashboard.php">Tableau de bord</a>
-                <li class="nav-item">
-                    <a class="nav-link" href="inscription.php">Inscription</a>
+                    <a class="nav-link text-white" href="inscription.php">Inscription</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="connexion.php">Connexion</a>
+                    <a class="nav-link text-white" href="connexion.php">Connexion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="dashboard.php">Tableau de bord</a>
                 </li>
             </ul>
         </div>
     </nav>
+</div>
+
+
 </header>

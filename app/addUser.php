@@ -37,7 +37,7 @@ if ( isset( $_POST ) && ! empty( $_POST ) ) {
 
 					if ( $req->execute() ) {
 						$_SESSION['success']  = 'Félicitation, votre compte a bien été créé !';
-						header( 'Location: ../dashboard.php' );
+						header( 'Location: ../connexion.php' );
 
 					} else {
 

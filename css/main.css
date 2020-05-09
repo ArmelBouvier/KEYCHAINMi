@@ -1,0 +1,62 @@
+/*--------------------------------------------------FONTS-------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Black.eot');
+    src: local('☺'), url('fonts/Montserrat-Black.woff') format('woff'), url('fonts/Montserrat-Black.ttf') format('truetype'), url('fonts/Montserrat-Black.svg') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Bold.eot');
+    src: local('☺'), url('fonts/Montserrat-Bold.woff') format('woff'), url('fonts/Montserrat-Bold.ttf') format('truetype'), url('fonts/Montserrat-Bold.svg') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Regular.eot');
+    src: local('☺'), url('fonts/Montserrat-Regular.woff') format('woff'), url('fonts/Montserrat-Regular.ttf') format('truetype'), url('fonts/Montserrat-Regular.svg') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Light.eot');
+    src: local('☺'), url('fonts/Montserrat-Light.woff') format('woff'), url('fonts/Montserrat-Light.ttf') format('truetype'), url('fonts/Montserrat-Light.svg') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+/*---------------------------------------------GENERAL PROPERTIES-----------------------------------------------------*/
+body{
+    background-image: url("../img/fond.jpg");
+    background-size: cover;
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: "Montserrat", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+}
+main{
+    margin-top : 5rem;
+}
+section{
+    background: rgba(8, 11, 17, 0.8);
+}
+.KEYCHAINMi{
+    color: #FFF;
+    text-shadow: #ffcc00 0px 0px 10px;
+}
+/*---------------------------------------------------HEADER-----------------------------------------------------------*/
+header{
+    width: 100%;
+    height: 70px;
+}
+a:hover{
+    text-shadow: #ffcc00 0px 0px 10px;
+}
+/*----------------------------------------------- ----MAIN -----------------------------------------------------------*/

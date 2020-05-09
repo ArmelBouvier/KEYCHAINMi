@@ -4,37 +4,33 @@ require_once 'app/traitementDashboard.php';
 require_once 'header.php';
 ?>
 
-<main role="main">
+<main role="main" class="container-fluid">
 
-	<section class="jumbotron text-center">
-		<div class="container">
-			<h1>Vos informations :</h1>
-			<a class="btn btn-primary" href="addUrl.php">Créer un nouveau mot de passe</a>
-		</div>
+	<section class="container">
+		<div class="row">
+			<h1 class="text-primary py-5">Vos informations <span class="KEYCHAINMi">KEYCHAINMi</span> :</h1></div>
+        <div class="row justify-content-center my-5">
+            <a class="btn btn-outline-primary" href="addUrl.php">Créer un nouveau mot de passe</a>
+        </div>
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col" id="url">Site</th>
+                <th scope="col" id="password">Mot de passe</th>
+                <th scope="col" id="cp"></th>
+            </tr>
+            </thead>
+            <tbody class="text-white">
+			<?php for ($i = 0, $iMax = count($resultats); $i < $iMax; $i++) : ?>
+                <tr>
+                    <td><?=$resultats[$i]->sitename?></td>
+                    <td class="pwd"><?=$resultats[$i]->password?></td>
+                    <td><button  class="copy btn btn-outline-primary">Copier</button></td>
+                </tr>
+			<?php endfor; ?>
+            </tbody>
+        </table>
 	</section>
-
-	<div class="album py-5 bg-light">
-		<div class="container">
-			<table class="table">
-				<thead class="thead-dark">
-				<tr>
-					<th scope="col" id="url">Site</th>
-					<th scope="col" id="password">Mot de passe</th>
-					<th scope="col" id="cp"></th>
-				</tr>
-				</thead>
-				<tbody>
-				<?php for ($i = 0, $iMax = count($resultats); $i < $iMax; $i++) : ?>
-					<tr>
-						<td><?=$resultats[$i]->sitename?></td>
-						<td><?=$resultats[$i]->password?></td>
-						<td><button class="btn-primary">Copier le mot de passe</button></td>
-					</tr>
-				<?php endfor; ?>
-				</tbody>
-			</table>
-		</div>
-	</div>
 
 </main>
 
