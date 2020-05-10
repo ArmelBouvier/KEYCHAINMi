@@ -1,3 +1,6 @@
+/*
+* Fonction de copie dans le clipboard
+*/
 var copyButton = document.querySelector(".copy");
 
 copyButton.addEventListener('click', function(event) {
@@ -11,4 +14,23 @@ copyButton.addEventListener('click', function(event) {
     } catch (err) {
         alert('La copie du mot de passe n\'a pas fonctionné');
     }
+});
+
+/*
+* Fonction d'affichage/masquage des mots de passe
+*/
+var showButton = document.querySelector(".showButton");
+var hideButton = document.querySelector(".hideButton");
+
+$(document).ready(function(){
+    $(".hiddenPassword").hide();
+    //Dès qu'on clique sur #b1, on applique hide() au titre
+    $(".hideButton").click(function(){
+        $(".hiddenPassword").hide();
+    });
+
+    //Dès qu'on clique sur #b1, on applique show() au titre
+    $(".showButton").click(function(){
+        $(".hiddenPassword").show();
+    });
 });

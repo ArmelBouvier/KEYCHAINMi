@@ -46,6 +46,7 @@ main{
 }
 section{
     background: rgba(8, 11, 17, 0.8);
+    border-radius: 2.5%;
 }
 .KEYCHAINMi{
     color: #FFF;

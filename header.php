@@ -49,18 +49,18 @@ if (!isset($_SESSION)) {
         </button>
 
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav ">
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="index.php">Accueil <span class="sr-only">(current)</span></a>
+                    <a class="nav-link text-primary" href="index.php">Accueil <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="inscription.php">Inscription</a>
+                    <a class="nav-link text-primary" href="inscription.php">Inscription</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="connexion.php">Connexion</a>
+                    <a class="nav-link text-primary" href="connexion.php">Connexion</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="dashboard.php">Tableau de bord</a>
+                    <a class="nav-link text-primary" href="dashboard.php">Tableau de bord</a>
                 </li>
             </ul>
         </div>
