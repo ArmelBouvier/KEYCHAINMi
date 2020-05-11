@@ -11,25 +11,29 @@ require_once 'header.php';
         <div class="row justify-content-center my-5">
             <a class="btn btn-outline-primary" href="addUrl.php">Créer un nouveau mot de passe</a>
         </div>
-        <div class="row">
-			<?php for ($i = 0; $i < count($resultats); $i++) : ?>
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm bg-transparent">
-                        <div class="card-body">
-                            <h3 class="card-title text-muted"><?=$resultats[$i]->sitename?></h3>
-                            <p class="card-text text-white"><?=$resultats[$i]->url?></p>
-                            <p class="card-text text-white">Créé le : <?=$resultats[$i]->created_at?></p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="password.php?id=<?= $resultats[$i]->id; ?>" class="btn btn-sm btn-outline-success"> Voir</a>
-                                    <a href="app/delete.php?id=<?= $resultats[$i]->id; ?>" class="btn btn-sm btn-outline-danger"> Supprimer</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-			<?php endfor; ?>
-        </div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th class="text-muted">Nom du site</th>
+                <th class="text-muted">URL</th>
+                <th class="text-muted">Mot de passe</th>
+                <th></th>
+            </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+	                <?php for ($i = 0, $iMax = count($resultats); $i < $iMax; $i++) : ?>
+                <tr>
+                    <td class="text-white"><?=$resultats[$i]->sitename?></td>
+                    <td class="text-white"><?=$resultats[$i]->url?></td>
+                    <td class="text-white"><a href="password.php?id=<?=$resultats[$i]->id?>" class="btn btn-outline-success">Afficher</a></td>
+                    <td class="text-white"><a href="app/delete.php?id=<?= $resultats[$i]->id; ?>" class="btn btn-sm btn-outline-danger"> Supprimer</a></td>
+                </tr>
+                <?php endfor; ?>
+                </tr>
+            </tbody>
+        </table>
 
 	</section>
 

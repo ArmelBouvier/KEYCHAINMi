@@ -3,7 +3,7 @@
 	<section class="container">
 		<h1 class="text-primary py-5">Pour utiliser <span class="KEYCHAINMi">KEYCHAINMi</span>, plus que quelques infos à fournir :</h1>
 
-		<form action="app/addUser.php" method="POST">
+		<form id="inscription" action="" method="POST">
 
 			<div class="row">
 				<div class="col-md-4">

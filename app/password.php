@@ -1,14 +1,12 @@
 <?php
-// Affiche un film
+// Affiche un mot de passe
 require_once 'can-connect.php';
 require_once 'bdd.php';
 
-// SELECTION DE TOUT LES FILMS
-$film = $connexion->prepare('SELECT * FROM film WHERE id = :id');
-$film->bindValue(':id', $_GET['id'], PDO::PARAM_INT);
-// EXECUTION DE LA REQUETE
-$film->execute();
-// RECUPERE LE RESULTAT AU FORMAT OBJET
-$resultat = $film->fetch(PDO::FETCH_OBJ);
-
-//var_dump($resultat);
+// Sélection du mot de passe correspondant à l'id
+$pwd = $connexion->prepare('SELECT * FROM keywords WHERE id = :id');
+$pwd->bindValue(':id', htmlentities($_GET['id']), PDO::PARAM_INT);
+// Exécution de la requête
+$pwd->execute();
+// Récupère le résultat au forma tobjet
+$resultat = $pwd->fetch(PDO::FETCH_OBJ);
