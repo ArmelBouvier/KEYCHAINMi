@@ -12,7 +12,12 @@ require_once 'app/password.php';
                 </div>
             </div>
             <div class="row justify-content-center">
-                <textarea class="text-muted pb-5 js-copytextarea" cols="15" rows="1"><?= $resultat->password; ?></textarea>
+                <div class="col-md-4">
+                    <input type="text"
+                           class="form-control text-center js-copytextarea bg-dark text-primary"
+                           value="<?= $resultat->password; ?>">
+                </div>
+
             </div>
             <div class="row py-5 justify-content-center" >
                 <button class="btn btn-outline-primary js-textareacopybtn">Copier</button>
