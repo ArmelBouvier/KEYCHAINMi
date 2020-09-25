@@ -3,6 +3,7 @@
 <?php session_start();
 require_once 'can-connect.php';
 require_once 'passwordGenerator.php';
+require_once 'bdd.php';
 
 if ( isset( $_POST ) && ! empty( $_POST ) ) {
 
@@ -48,8 +49,10 @@ if ( isset( $_POST ) && ! empty( $_POST ) ) {
 						$req->bindValue(':Kid', $keyword_id, PDO::PARAM_INT);
 						$req->execute();
 
-						$_SESSION['success']  = 'Un nouveau mot de passe a bien été créé pour le site ' . $_POST['site'] . ' !';
-						header( 'Location: ../dashboard.php' );
+						$json = [ // est égal à resPHP dans le JS
+							'result' => 'ok',
+							'message' => 'Votre mot de passe a bien été ajouté',
+						];
 
 					} else {
 

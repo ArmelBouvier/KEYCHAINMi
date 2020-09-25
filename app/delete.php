@@ -2,10 +2,34 @@
 // Supprime un mot de passe
 require_once 'can-connect.php';
 require_once 'bdd.php';
-echo '<pre>';
-var_dump($_SESSION['id']);
-var_dump($_GET['id']);
-echo '</pre>';
+
+if(!empty($_POST)){
+	if(is_numeric($_POST['idMdp']) && !empty($_POST['idMdp'])){
+
+		$delete = $connexion->prepare('DELETE FROM keywords_user WHERE keyword_id = :keyword_id');
+		$delete->bindValue(':keyword_id', (int) $_POST['idMdp'], PDO::PARAM_INT);
+
+		if($delete->execute()){
+			$del = $connexion->prepare('DELETE FROM keywords WHERE id = :id');
+			$del->bindValue(':id', htmlentities($_POST['id']), PDO::PARAM_INT);
+
+			// Exécution de la requête de suppression de la table keywords
+			if($del->execute()){
+				$json = '<div class="alert alert-success">Le mot de passe a été supprimé avec succès</div>';
+			}else{
+				$json = '<div class="alert alert-success">Erreur lors de la suppression (k)</div>';
+			}
+
+		}else {
+			$json = '<div class="alert alert-success">Erreur lors de la suppression (k_u)</div>';
+		}
+	}
+	else {
+		$json = '<div class="alert alert-danger">Pas de mot de passe correspondant</div>';
+	}
+	echo json_encode($json);
+}
+
 
 // Sélection de l'assiciation user_id et keyword_id
 $delete = $connexion->prepare('DELETE FROM keywords_user WHERE keyword_id = :keyword_id');

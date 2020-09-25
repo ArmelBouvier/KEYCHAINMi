@@ -28,7 +28,7 @@ if ( isset( $_POST ) && ! empty( $_POST ) ) {
 
 				if ( ! $resultemail && ! $resultpseudo ) {
 
-					$sql = 'INSERT INTO user (pseudo, email, password) VALUES(:pseudo, :email, :password)';
+					$sql = 'INSERT INTO user (pseudo, email, password) VALUES (:pseudo, :email, :password)';
 					$req = $connexion->prepare( $sql );
 
 					$req->bindValue( ':email', $_POST['email'], PDO::PARAM_STR );
